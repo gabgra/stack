@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(actionn))
+        self.view.addGestureRecognizer(recognizer)
+        
+    }
+    
+    @objc func actionn()
+    {
+        performSegue(withIdentifier: "ident2", sender: self)
     }
 
 
